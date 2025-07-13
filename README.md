@@ -83,23 +83,6 @@
 
 ---
 
-#### 📱 微信公众号
-
-适合移动端阅读，每日推送，不再错过精彩内容。
-
-*   **关注方式**
-    > 打开微信，搜索公众号「**何夕2077**」并关注。
-    >
-    > `💬 欢迎在公众号后台与我们交流`
-
-
-### **内容成果展示：**
-
-| 🎙️ **小宇宙** | 📹 **抖音** |
-| --- | --- |
-| [来生小酒馆](https://www.xiaoyuzhoufm.com/podcast/683c62b7c1ca9cf575a5030e)  |   [来生情报站](https://www.douyin.com/user/MS4wLjABAAAAwpwqPQlu38sO38VyWgw9ZjDEnN4bMR5j8x111UxpseHR9DpB6-CveI5KRXOWuFwG)| 
-| ![小酒馆](docs/images/sm2.png "img") | ![情报站](docs/images/sm1.png "img") |
-
 
 ### **后台项目截图：**
 
@@ -244,29 +227,6 @@ AI 或许能模仿你过去的喜好，却难以捕捉你此刻的灵感与洞�
 *   **🎨 优化用户体验**：开发功能更完善的前端界面，支持个性化订阅、关键词筛选和历史内容搜索。
 *   **🌍 支持多语言**：扩展项目的多语言处理能力，服务全球范围内的 AI 爱好者。
 *   **🤝 构建开放生态**：集成更多先进的 AI 模型，并欢迎社区开发者共同贡献，打造一个开放、协作的内容生成平台。
-
----
-
-## 💬 交流与支持
-
-> **有任何问题请提 [Issue](https://github.com/justlovemaki/CloudFlare-AI-Insight-Daily/issues)**，或许你的问题也能帮助其它有同样困惑的人
-
-<table>
-  <tr>
-    <td align="center">
-      <img src="docs/images/wechat.png" alt="Wechat QR Code" width="150">
-      <br>
-      <strong>进群讨论</strong>
-    </td>
-    <td align="center">
-      <img src="docs/images/sponsor.png" alt="Sponsor QR Code" width="150">
-      <br>
-      <strong>赞助留名</strong>
-    </td>
-  </tr>
-</table>
-
-> 欢迎您 Star, Fork 并参与贡献，共同将“AI 洞察日报”打造为更强大的 AI 信息利器！
 
 ---
 
