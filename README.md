@@ -111,6 +111,52 @@
 
 ## 🚀 快速开始
 
+### 方法一：一键本地运行 (推荐)
+
+我们提供了便捷的快速启动脚本，支持 Linux/macOS 和 Windows 系统：
+
+#### Linux/macOS 用户
+```bash
+# 给脚本执行权限
+chmod +x scripts/quick-start.sh
+
+# 一键启动
+./scripts/quick-start.sh
+
+# 或者分步执行
+./scripts/quick-start.sh --check    # 仅检查环境
+./scripts/quick-start.sh --install  # 仅安装依赖
+./scripts/quick-start.sh --start    # 直接启动
+```
+
+#### Windows 用户
+```cmd
+# PowerShell 脚本 (推荐)
+# 如果遇到执行策略问题，请先运行：
+# Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+# 测试环境 (可选)
+.\scripts\test-env.ps1
+
+# 启动项目
+.\scripts\quick-start.ps1
+
+# 或者分步执行
+.\scripts\quick-start.ps1 -Check    # 仅检查环境
+.\scripts\quick-start.ps1 -Install  # 仅安装依赖
+.\scripts\quick-start.ps1 -Start    # 直接启动
+
+# 批处理脚本 (备选)
+scripts\quick-start.bat
+
+# 或者分步执行
+scripts\quick-start.bat --check    # 仅检查环境
+scripts\quick-start.bat --install  # 仅安装依赖
+scripts\quick-start.bat --start    # 直接启动
+```
+
+### 方法二：手动配置
+
 > [!NOTE]
 > 本项目优先支持从 [Folo](https://app.follow.is/) 数据源抓取内容。
 > 您只需通过F12获取Folo Cookie，并将其配置到项目中即可在线试用。
@@ -119,12 +165,51 @@
 > 为了保证项目的正常运行，您需要在项目中配置 Folo Cookie。
 > Folo Cookie只保留在浏览器，没有安全隐患。
 
-1.  **获取Folo Cookie**
+#### 1. 获取Folo Cookie
     
-    [![cookie](docs/images/folo-0.png "img")](docs/images/folo-0.png)
+[![cookie](docs/images/folo-0.png "img")](docs/images/folo-0.png)
 
-2.  **[Demo 地址](https://ai-daily-demo.justlikemaki.workers.dev/getContentHtml)**
-    * 默认账号密码：root/toor
+#### 2. 配置环境
+
+1. **安装依赖**
+   ```bash
+   npm install -g wrangler
+   ```
+
+2. **登录 CloudFlare**
+   ```bash
+   wrangler login
+   ```
+
+3. **创建 KV 命名空间**
+   ```bash
+   wrangler kv:namespace create "DATA_KV"
+   ```
+
+4. **更新配置文件**
+   - 编辑 `wrangler.toml`
+   - 替换 `kv数据库的ID` 为实际的 KV ID
+   - 配置 API 密钥 (Gemini, OpenAI, GitHub)
+
+#### 3. 启动服务
+```bash
+wrangler dev --local
+```
+
+#### 4. 访问应用
+- 访问地址: http://localhost:8787
+- 默认登录账号: root/toor
+
+### 在线演示
+
+**[Demo 地址](https://ai-daily-demo.justlikemaki.workers.dev/getContentHtml)**
+* 默认账号密码：root/toor
+
+### GitHub 权限配置
+
+如果遇到 GitHub API 权限错误，请参考：
+- **[GitHub 权限配置指南](docs/GITHUB_SETUP.md)** - 详细的 Token 配置说明
+- **测试 GitHub Token**: `.\scripts\test-github-token.ps1` - 验证 Token 权限
 ---
 
 ## 📚 更多文档
